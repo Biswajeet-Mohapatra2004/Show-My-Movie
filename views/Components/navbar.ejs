@@ -1,0 +1,77 @@
+<!-- <header>
+    <div class="container" id="nav-bar-container">
+        <div class="row">
+            <div class="col-2" id="logo">
+                <b> <i>Show My Movie</i></b>
+            </div>
+            <div class="col-7 offset-3" style="display: flex; flex-direction: row; justify-content: space-between;">
+                <form id="myForm" action="/movies/genre" method="post">
+                    <select name="Genre" id="selectOption">
+                        <option value="Genre">Genre</option>
+                        <option value="28">Action</option>
+                        <option value="16">Animation</option>
+                        <option value="35">Comedy</option>
+                        <option value="80">Crime</option>
+                        <option value="99">Documentary</option>
+                        <option value="18">Drama</option>
+                        <option value="10751">Family</option>
+                        <option value="14">Fantasy</option>
+                        <option value="36">History</option>
+                        <option value="27">Horror</option>
+                        <option value="9648">Mystery</option>
+                        <option value="10749">Romance</option>
+                        <option value="878">Science Friction</option>
+                        <option value="10770">Thriller</option>
+                        <option value="10752">War</option>
+                        <option value="37">Western</option>
+                    </select>
+
+                </form>
+                <a href=""></a>
+                <form action="/query" method="post">
+                    <input type="text" name="query" placeholder="search movie">
+                    <button id="submit-query" class="bg-primary text-white">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header> -->
+<header>
+    <div class="container" id="nav-bar-container">
+        <div class="row">
+            <div class="col-md-2 col-12" id="logo">
+                <b><i>Show My Movie</i></b>
+            </div>
+            <div class="col-md-7 col-12 mt-3 mt-md-0"
+                style="display: flex; flex-direction: row; justify-content: space-between;">
+                <form id="myForm" action="/movies/genre" method="post"
+                    class="d-flex flex-column flex-md-row align-items-center">
+                    <label for="selectOption" class="mr-md-2 mb-2 mb-md-0">Select Genre:</label>
+                    <select name="Genre" id="selectOption" class="mb-2 mb-md-0">
+                        <option value="Genre">Genre</option>
+                        <option value="28">Action</option>
+                        <option value="16">Animation</option>
+                        <option value="35">Comedy</option>
+                        <option value="80">Crime</option>
+                        <option value="99">Documentary</option>
+                        <option value="18">Drama</option>
+                        <option value="10751">Family</option>
+                        <option value="14">Fantasy</option>
+                        <option value="36">History</option>
+                        <option value="27">Horror</option>
+                        <option value="9648">Mystery</option>
+                        <option value="10749">Romance</option>
+                        <option value="878">Science Friction</option>
+                        <option value="10770">Thriller</option>
+                        <option value="10752">War</option>
+                        <option value="37">Western</option>
+                    </select>
+                </form>
+                <form action="/query" method="post" class="d-flex flex-column flex-md-row align-items-center">
+                    <input type="text" name="query" placeholder="Search movie" class="mb-2 mb-md-0 mr-md-2">
+                    <button id="submit-query" class="bg-primary text-white">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>

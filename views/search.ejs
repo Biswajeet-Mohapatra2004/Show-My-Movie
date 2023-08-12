@@ -1,0 +1,41 @@
+<%- include('./Components/head.ejs') %>
+
+    <body>
+        <%- include('./Components/navbar.ejs') %>
+            <br>
+            <br>
+            <div class="container">
+
+                <div class="row justify-content-center" id="dataContainer">
+                    <% for(let movies of SearchData) {%>
+                        <% if((movies.poster_path && movies.overview) && movies.popularity>3){ %>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4">
+                                <form action="movies/<%=movies.id %>" method="get" class="d-flex flex-column h-100">
+                                    <div class="text-center">
+                                        <img src="https://image.tmdb.org/t/p/w185<%=movies.poster_path  %>" alt=""
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="text-center mt-2 flex-grow-1" style="color: white;">
+                                        <h5><b>
+                                                <%= movies.original_title %>
+                                            </b></h5>
+                                        <button style="background-color: gold;"
+                                            class="btn btn-secondary btn-sm mt-auto"><b>Know More</b></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <% } %>
+                                <% } %>
+
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <%- include('./Components/footer.ejs') %>
+
+    </body>
+
+    </html>
