@@ -47,7 +47,7 @@ Home Page:
 The home page displays a collection of shows from different genres.
 Click on the "Know More" button to view details, trailers, and teasers for a show.
 Technologies Used
-HTML, CSS: Frontend UI design.
+HTML, CSS and Bootstrap 5(only grid system for layout): Frontend UI design.
 Node.js, Express: Backend server and routing.
 EJS: Templating engine for dynamic content.
 Notes
