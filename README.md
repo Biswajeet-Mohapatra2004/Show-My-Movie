@@ -50,6 +50,8 @@ Technologies Used
 HTML, CSS and Bootstrap 5(only grid system for layout): Frontend UI design.
 Node.js, Express: Backend server and routing.
 EJS: Templating engine for dynamic content.
+Axios: for fetching data from the APIs.
+
 Notes
 This project uses simulated data for demonstration purposes.
 For a production-ready version, consider implementing proper security measures and integrating with a real database.
