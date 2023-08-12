@@ -28,9 +28,12 @@
                                 <%= rating %>
                             </b></p>
                         <p><b style="color: gold;">Genres: </b>
-                            <%= genres.join(", ") %></p>
+                            <% for(let genre of genres){ %>
+                                <span>
+                                    <%= genre.name+" " %></span>
+                            <% } %></p>
                 <p><b style=" color: gold;">Produced By: </b>
-                                <%= production.map(type=> `(${type.name}, ${type.origin_country})`).join(" ") %>
+                                        <%= production.map(type=> `(${type.name}, ${type.origin_country})`).join(" ") %>
                         </p>
                     </div>
                 </div>

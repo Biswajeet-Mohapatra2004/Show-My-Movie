@@ -40,8 +40,8 @@ app.get('/', async (req, res) => {
         const DramaMovies = await axios.get("https://api.themoviedb.org/3/discover/movie?api_key=23ed18eb7d3a1c0e3d575df4092efa22&with_genres=18");
         Drama = DramaMovies.data.results.slice(0, 18);
 
-
-        res.render('home.ejs', { data, Adventure, Drama })
+        const title = "Search For your Movies and Shows Easily!!"
+        res.render('home.ejs', { data, Adventure, Drama, title })
     } catch (error) {
         console.log(error)
     }
@@ -85,7 +85,8 @@ app.get('/movies/:movieId', async (req, res) => {
 
 })
 app.get('/movieInfo', (req, res) => {
-    res.render('movieInfo.ejs', { genres, production, releaseDate, title, overview, rating, poster, trailer, teaser });
+    const title = "Movie Information"
+    res.render('movieInfo.ejs', { genres, production, releaseDate, title, overview, rating, poster, trailer, teaser, title });
 })
 let GenreData = [];
 app.post('/movies/genre', async (req, res) => {
@@ -110,13 +111,15 @@ app.post('/movies/genre', async (req, res) => {
 
 })
 app.get("/genre", (req, res) => {
-    res.render('genre.ejs', { GenreData });
+    const title = "Genre"
+    res.render('genre.ejs', { GenreData, title });
 })
 // add route to handle search request
 // let search;
+let search;
 let SearchData = [];
 app.post('/query', async (req, res) => {
-    let search = req.body.query;
+    search = req.body.query;
     try {
         SearchData = [];
         let request = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=23ed18eb7d3a1c0e3d575df4092efa22&language=en-US&page=1&query=${search}&include_adult=true`)
@@ -136,5 +139,6 @@ app.post('/query', async (req, res) => {
 
 })
 app.get('/show', (req, res) => {
-    res.render('search.ejs', { SearchData });
+    const title = `Movies related to ${search}`;
+    res.render('search.ejs', { SearchData, title });
 })
